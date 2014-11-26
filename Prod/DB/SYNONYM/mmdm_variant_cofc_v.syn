@@ -1,0 +1,3 @@
+create or replace synonym MMDM_VARIANT_COFC_V
+  for MMDM_VARIANT_COFC_V@PELA.PH.CHBS;
+

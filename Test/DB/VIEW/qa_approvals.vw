@@ -1,0 +1,3 @@
+create or replace force view qa_approvals as
+select "LABEL_ID","VERSION_NO","USER_ID","STATUS","APPR_SIGN","REJ_SIGN","APPR_NOTE","REJ_NOTE","APPR_REJ_COMMENTS","CREATED_BY","DATE_CREATED","MODIFIED_BY","DATE_MODIFIED" from QA_APPROVALS@clin;
+

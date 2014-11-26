@@ -1,0 +1,3 @@
+create or replace synonym SAI_V_TRIAL
+  for SAI_V_TRIAL@CLINADMINPROD.PH.CHBS;
+

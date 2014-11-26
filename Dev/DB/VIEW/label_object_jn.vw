@@ -1,0 +1,11 @@
+CREATE OR REPLACE FORCE VIEW LABEL_OBJECT_JN AS
+SELECT "LABEL_ID",
+    "VERSION_NO",
+    "SEQ_NO",
+    "LABEL_OBJECT",
+    "OBJECT_TYPE",
+    "JN_OPERATION",
+    "JN_DATETIME",
+    "JN_ORACLE_USER"
+  FROM label_object_jn@clin.ph.chbs;
+

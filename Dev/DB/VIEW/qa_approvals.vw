@@ -1,0 +1,16 @@
+CREATE OR REPLACE FORCE VIEW QA_APPROVALS AS
+SELECT "LABEL_ID",
+    "VERSION_NO",
+    "USER_ID",
+    "STATUS",
+    "APPR_SIGN",
+    "REJ_SIGN",
+    "APPR_NOTE",
+    "REJ_NOTE",
+    "APPR_REJ_COMMENTS",
+    "CREATED_BY",
+    "DATE_CREATED",
+    "MODIFIED_BY",
+    "DATE_MODIFIED"
+  FROM qa_approvals@clin.ph.chbs;
+

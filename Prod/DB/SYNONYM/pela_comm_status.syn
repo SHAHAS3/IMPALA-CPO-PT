@@ -1,0 +1,3 @@
+create or replace synonym PELA_COMM_STATUS
+  for PELA.PELA_COMM_STATUS@PELA.PH.CHBS;
+

@@ -1,0 +1,36 @@
+CREATE OR REPLACE PROCEDURE strategicelements
+  (
+    vfh_id IN NUMBER)
+AS
+  vfp_id                        NUMBER;
+  vNOOFSUBJECTSTOBERANDOMIZED   NUMBER;
+  vUNITSPERSUBJECTPERTRTMNT_DAY NUMBER;
+  vTREATMENTDURATION_PERSUBJECT NUMBER;
+  CURSOR c1
+  IS
+     SELECT id                     ,
+      NOOFSUBJECTSTOBERANDOMIZED   ,
+      UNITSPERSUBJECTPERTRTMNT_DAY ,
+      TREATMENTDURATION_PERSUBJECT
+       FROM forecastingproducts
+      WHERE fh_id=vfh_id;
+BEGIN
+  OPEN c1;
+  LOOP
+    FETCH c1
+       INTO vfp_id                 ,
+      vNOOFSUBJECTSTOBERANDOMIZED  ,
+      vUNITSPERSUBJECTPERTRTMNT_DAY,
+      vTREATMENTDURATION_PERSUBJECT;
+     UPDATE forecastingproducts
+    SET quantity = vNOOFSUBJECTSTOBERANDOMIZED * vUNITSPERSUBJECTPERTRTMNT_DAY * vTREATMENTDURATION_PERSUBJECT
+      WHERE id   =vfp_id;
+      
+    commit; -- WK, 06.08.2009
+    EXIT
+  WHEN c1%notfound;
+  END LOOP;
+  CLOSE c1;
+END;
+/
+

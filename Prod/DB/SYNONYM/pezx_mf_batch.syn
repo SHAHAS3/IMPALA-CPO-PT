@@ -1,0 +1,3 @@
+create or replace synonym PEZX_MF_BATCH
+  for IMPALA.PEZX_MF_BATCH@PELA.PH.CHBS;
+

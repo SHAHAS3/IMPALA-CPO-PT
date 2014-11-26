@@ -1,0 +1,3 @@
+create or replace synonym PEZX_MF_CODE_TXT
+  for PEZX_MF_CODE_TXT@PELA.PH.CHBS;
+

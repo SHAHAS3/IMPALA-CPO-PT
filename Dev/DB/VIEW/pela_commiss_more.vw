@@ -1,0 +1,16 @@
+CREATE OR REPLACE FORCE VIEW PELA_COMMISS_MORE AS
+SELECT "STOCK_C",
+    "YEAR",
+    "NUMBER_4",
+    "U_VERSION",
+    "IL_REMINDED_D",
+    "CONFIRM_REMINDED_D",
+    "CONFIRM_RECEIVED_D",
+    "CREATOR_NA",
+    "CREATOR_DEP",
+    "CREATION_D",
+    "MUT_NA",
+    "MUT_DEP",
+    "MUT_D"
+  FROM pela.pela_commiss_MORE@pela.ph.chbs;
+
